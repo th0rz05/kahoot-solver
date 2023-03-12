@@ -5,10 +5,8 @@ import json as j
 def get_answers(id):  
     url = "https://play.kahoot.it/rest/kahoots/"+id
 
-    color_list = ["red", "blue", "yellow", "green"]
     json = j.loads(ur.urlopen(url).read())
     
-    #print title
     print(f"\n{json.get('title')}\n")
 
     questions = json.get("questions")
